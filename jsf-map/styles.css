@@ -143,11 +143,11 @@ svg {
 }
 
 #panel-WeSocialMovementWSM {
-    margin-top: 400px; /* Push WSM further down to sit cleanly in the bottom-left corner */
+    margin-top: 320px; /* Lifted slightly up */
 }
 
 #panel-EntraideetFraterniteEF {
-    margin-top: 350px; /* Push EF further down to sit cleanly in the bottom-right corner */
+    margin-top: 450px; /* Pushed a tiny bit further down */
 }
 
 .callout-partner {

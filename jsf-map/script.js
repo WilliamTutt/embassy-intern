@@ -318,7 +318,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Specific manual ranking for EF
             if (name === "Entraide et Fraternite (EF)") {
-                const efOrder = ["AGRO-ECO", "SUMPAY", "LAFCCOD", "CONZARRD"];
+                const efOrder = [
+                    "AGRO-ECO", 
+                    "SUMPAY", 
+                    "LAFCOOD", 
+                    "CONZARRD",
+                    "Kilos Ka"
+                ];
                 partnersList.sort((a, b) => {
                     const idxA = efOrder.indexOf(a) !== -1 ? efOrder.indexOf(a) : 999;
                     const idxB = efOrder.indexOf(b) !== -1 ? efOrder.indexOf(b) : 999;
