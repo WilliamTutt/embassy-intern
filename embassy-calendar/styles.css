@@ -1,0 +1,601 @@
+:root {
+    /* Belgian Flag Core Colors */
+    --belgium-black: #0f172a;
+    --belgium-yellow: #fdda24;
+    --belgium-red: #ef3340;
+
+    --bg-color: #fdfcf7; /* Premium off-white paper texture */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+
+    /* Event Category Badges */
+    --academic-badge-bg: rgba(34, 197, 94, 0.15);
+    --academic-badge-text: #166534;
+    --academic-border: rgba(34, 197, 94, 0.4);
+
+    --economic-badge-bg: rgba(168, 85, 247, 0.15);
+    --economic-badge-text: #6b21a8;
+    --economic-border: rgba(168, 85, 247, 0.4);
+
+    --democracy-badge-bg: rgba(234, 179, 8, 0.15);
+    --democracy-badge-text: #854d0e;
+    --democracy-border: rgba(234, 179, 8, 0.5);
+
+    --visits-badge-bg: rgba(249, 115, 22, 0.15);
+    --visits-badge-text: #9a3412;
+    --visits-border: rgba(249, 115, 22, 0.4);
+
+    --belgian-days-badge-bg: rgba(56, 189, 248, 0.15);
+    --belgian-days-badge-text: #0369a1;
+    --belgian-days-border: rgba(56, 189, 248, 0.4);
+    
+    --embassy-badge-bg: rgba(253, 218, 36, 0.25);
+    --embassy-badge-text: #854d0e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(353,100%,57%,0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(50,98%,56%,0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Banner */
+.flag-banner {
+    display: flex;
+    height: 8px;
+    width: 100%;
+}
+.flag-banner .stripe {
+    flex: 1;
+    height: 100%;
+}
+.stripe.black { background-color: #000000; }
+.stripe.yellow { background-color: var(--belgium-yellow); }
+.stripe.red { background-color: var(--belgium-red); }
+
+/* App Header Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.back-btn {
+    text-decoration: none;
+    background-color: var(--belgium-red);
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.back-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.export-btn {
+    background-color: var(--belgium-black);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.export-btn:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+/* Main Layout Grid */
+.app-container {
+    max-width: 100%;
+    margin: 1rem auto 3rem auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .app-container {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
+}
+
+/* Sidebar Controls */
+.controls-panel {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.controls-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--belgium-black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-select, .form-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-select:focus, .form-input:focus {
+    border-color: var(--belgium-red);
+}
+
+.filter-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.check-label input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--belgium-red);
+    cursor: pointer;
+}
+
+/* Printable Poster Canvas */
+#poster-canvas {
+    background-color: var(--bg-color);
+    width: 100%; /* Fluid width to fit full right side */
+    min-height: 1500px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Poster Header */
+.poster-header {
+    border-bottom: 3px double #000;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.poster-header-titles h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--belgium-black);
+    line-height: 1.1;
+}
+
+.poster-header-titles p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    font-weight: 500;
+}
+
+.poster-header-crest {
+    text-align: right;
+}
+
+.poster-header-crest .coat {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--belgium-yellow), #eab308);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.poster-header-crest div {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* 12-Month Poster Grid */
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+/* Single Month Box */
+.month-box {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.month-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--belgium-black);
+    border-bottom: 2px solid var(--belgium-yellow);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.month-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+}
+
+.day-name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    padding: 3px 0;
+    text-transform: uppercase;
+}
+
+.day-cell {
+    font-size: 0.78rem;
+    padding: 4px 2px;
+    border-radius: 4px;
+    min-height: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.day-cell:hover {
+    background-color: #f1f5f9;
+}
+
+.day-cell.other-month {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.day-cell.weekend {
+    color: #94a3b8;
+    background-color: #f8fafc;
+}
+
+.day-cell.has-holiday {
+    font-weight: 700;
+}
+
+.day-cell.event-academic {
+    background-color: var(--academic-badge-bg);
+    color: var(--academic-badge-text);
+    border: 1px solid var(--academic-border);
+}
+
+.day-cell.event-economic {
+    background-color: var(--economic-badge-bg);
+    color: var(--economic-badge-text);
+    border: 1px solid var(--economic-border);
+}
+
+.day-cell.event-democracy {
+    background-color: var(--democracy-badge-bg);
+    color: var(--democracy-badge-text);
+    border: 1px solid var(--democracy-border);
+}
+
+.day-cell.event-visits {
+    background-color: var(--visits-badge-bg);
+    color: var(--visits-badge-text);
+    border: 1px solid var(--visits-border);
+}
+
+.day-cell.event-belgian-days {
+    background-color: var(--belgian-days-badge-bg);
+    color: var(--belgian-days-badge-text);
+    border: 1px solid var(--belgian-days-border);
+}
+
+.day-cell.event-custom {
+    background-color: var(--embassy-badge-bg);
+    color: var(--embassy-badge-text);
+    border: 1px solid rgba(234, 179, 8, 0.5);
+}
+
+.day-indicator {
+    font-size: 0.6rem;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+/* Custom Events List Box at bottom of poster */
+.events-summary-box {
+    margin-top: 2rem;
+    border-top: 2px solid var(--belgium-black);
+    padding-top: 1rem;
+}
+
+.events-summary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--belgium-black);
+}
+
+.events-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1.5rem;
+}
+
+.event-item {
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 0;
+}
+
+.event-date {
+    font-weight: 700;
+    min-width: 75px;
+    color: var(--text-primary);
+}
+
+.event-name {
+    color: var(--text-muted);
+}
+
+/* Single Month Detailed View */
+.single-month-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.single-month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.single-day-cell {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-height: 100px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.single-day-num {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.single-day-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+
+/* Modal for Custom Event Addition */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Enhanced Legend & Stakeholder Styles for Grid */
+.events-summary-grid-grouped {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.legend-category {
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.legend-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.legend-header.economic-header { color: var(--economic-badge-text); border-bottom-color: var(--economic-badge-text); }
+.legend-header.democracy-header { color: var(--democracy-badge-text); border-bottom-color: var(--democracy-badge-text); }
+.legend-header.academic-header { color: var(--academic-badge-text); border-bottom-color: var(--academic-badge-text); }
+.legend-header.visits-header { color: var(--visits-badge-text); border-bottom-color: var(--visits-badge-text); }
+.legend-header.belgian_days-header { color: var(--belgian-days-badge-text); border-bottom-color: var(--belgian-days-badge-text); }
+.legend-header.custom-header { color: var(--text-muted); border-bottom-color: var(--text-muted); }
+
+.legend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-list li {
+    padding: 0.35rem 0;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.legend-list li:last-child {
+    border-bottom: none;
+}
+
+.legend-date {
+    font-weight: 700;
+    color: var(--belgium-black);
+    min-width: 90px;
+}
+
+.legend-name {
+    color: var(--text-primary);
+}
+
+.stakeholder-section-poster {
+    margin-top: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.table-header {
+    border-bottom-color: var(--belgium-yellow);
+    border-bottom: 2px solid var(--belgium-yellow);
+    padding-bottom: 0.5rem;
+}
+
+.stakeholder-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.stakeholder-table th {
+    background-color: var(--belgium-black);
+    color: white;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.stakeholder-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+.stakeholder-table tr:hover td {
+    background-color: #f8fafc;
+}

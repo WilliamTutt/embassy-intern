@@ -1,0 +1,91 @@
+{
+  "2026": [
+    { "date": "2026-01-07", "name": "Online Academic Partnership BE-PH, PhilABUS", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    
+    { "date": "2026-02-09", "name": "Belgian Pork Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-02-10", "name": "Belgian Pork Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-02-11", "name": "Belgian Pork Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-02-12", "name": "Belgian Pork Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    
+    { "date": "2026-03-01", "name": "Women's Month: WomenWhoLead, 'Women's Voices', WPS Lecture, Dialogue", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-03-05", "name": "Atomnia Contract Signing (Cyber)", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-06", "name": "Mission to Del Carmen, Siargao", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    
+    { "date": "2026-03-09", "name": "Mission to Davao: Visit of Puratos Facilities, CSO meeting", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-03-10", "name": "Mission to Davao: Visit of Puratos Facilities, CSO meeting", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-03-11", "name": "Mission to Davao: Visit of Puratos Facilities, CSO meeting", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-03-12", "name": "Mission to Davao: Visit of Puratos Facilities, CSO meeting", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    
+    { "date": "2026-03-11", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-12", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-13", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-14", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-15", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-16", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-17", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-03-18", "name": "Maritime Cooperation Mission", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    
+    { "date": "2026-03-17", "name": "Mission to Cebu: 2gether4Water event, Lecture in USC", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-03-18", "name": "Mission to Cebu: 2gether4Water event, Lecture in USC", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    
+    { "date": "2026-03-31", "name": "ADB's First European Roadshow", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    
+    { "date": "2026-04-29", "name": "Sorsogon Field Engagement on Earth Day w/ TRIAS", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-04-29", "name": "Academic Engagement w/ Quezon City University", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    
+    { "date": "2026-05-20", "name": "Opening Ceremony of Belgian Days", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    { "date": "2026-05-28", "name": "Onsite Belgian Cooking Workshop & Banquet", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    
+    { "date": "2026-06-01", "name": "PRIDE Month: Progress flag raising, PRIDE March, QC", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-06-01", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-02", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-03", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-04", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-05", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-06", "name": "Economic Mission by Belgian Trade Office", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    
+    { "date": "2026-06-02", "name": "Cine Europa: Heads or Tails Screening", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    { "date": "2026-06-14", "name": "Cine Europa: Heads or Tails Screening", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    
+    { "date": "2026-06-03", "name": "Belgian Business Gala", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    { "date": "2026-06-03", "name": "Economic Mission: Bellavie & Aglobal Care Signing", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    { "date": "2026-06-03", "name": "Special Happy Hour, BFBC", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    
+    { "date": "2026-06-05", "name": "Young Mothers (frères dardennes) Screening, Manila", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    { "date": "2026-06-06", "name": "Experience Belgium", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    { "date": "2026-06-16", "name": "Academic Engagement in UST w/ PhilABUS", "type": "belgian_days", "flag": "🎉", "desc": "Belgian days" },
+    
+    { "date": "2026-06-22", "name": "TRIAS Southeast Asia - Visit to Urban MBO Partners", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-06-24", "name": "International Women in Diplomacy, ECCP Davao", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    
+    { "date": "2026-06-30", "name": "Minister Visit", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-07-01", "name": "Minister Visit", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    
+    { "date": "2026-07-17", "name": "UGent Visit to Visayas State University", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-07-18", "name": "UGent Visit to Visayas State University", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-07-19", "name": "UGent Visit to Visayas State University", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    
+    { "date": "2026-07-20", "name": "Young Mothers (frères dardennes) Screening, Cebu", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-07-21", "name": "Belgian National Day, Cebu", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-07-24", "name": "University of Antwerp IOB Alumni Event", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    
+    { "date": "2026-08-01", "name": "Student Send-Off", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    
+    { "date": "2026-09-14", "name": "Historical Exhibit: L'Archipel et le Plat Pays", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-15", "name": "Historical Exhibit: L'Archipel et le Plat Pays", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-16", "name": "Historical Exhibit: L'Archipel et le Plat Pays", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-17", "name": "Historical Exhibit: L'Archipel et le Plat Pays", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-18", "name": "Historical Exhibit: L'Archipel et le Plat Pays", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-19", "name": "Speak Dating Event", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-09-29", "name": "BelFil Business Bridge", "type": "economic", "flag": "💼", "desc": "Economic & Maritime Cooperation" },
+    
+    { "date": "2026-10-01", "name": "International Day of the Girl Child", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-10-12", "name": "2gether4water belgain cebu 2026", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-10-13", "name": "2gether4water belgain cebu 2026", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" },
+    { "date": "2026-11-05", "name": "King's Day", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-11-11", "name": "Cacao Fiesta w/ Puratos @ Davao", "type": "visits", "flag": "🤝", "desc": "Visits & Missions" },
+    { "date": "2026-11-21", "name": "European Higher Education Fair 2026", "type": "academic", "flag": "🎓", "desc": "Academic & Public Diplomacy" },
+    { "date": "2026-11-25", "name": "Ending Violence Against Women Campaign", "type": "democracy", "flag": "⚖️", "desc": "Democracy, Human Rights & Governance" }
+  ],
+  "2027": []
+}

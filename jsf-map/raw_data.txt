@@ -1,0 +1,141 @@
+| Regional Node | Manila (Regional Office) | 14.5995 | 120.9842 | Regional HQ
+| Regional Node | Luzon | 16.5662 | 121.2626 | Regional Coverage
+| Regional Node | Visayas | 11.0049 | 124.6075 | Regional Coverage
+| Regional Node | Mindanao | 7.1907 | 125.4553 | Regional Coverage
+| ATM (SOS) | 1. Cagayan | 18.2833 | 121.8333 | Mining Intervention Site
+| ATM (SOS) | 2. Nueva Vizcaya | 16.3181 | 121.2958 | Mining Intervention Site
+| ATM (SOS) | 3. Pangasinan | 16.0000 | 120.4000 | Mining Intervention Site
+| ATM (SOS) | 4. Zambales | 15.7667 | 119.9500 | Mining Intervention Site
+| ATM (SOS) | 5. Cavite | 14.4933 | 120.9083 | Mining Intervention Site
+| ATM (SOS) | 6. Mindoro | 13.4140 | 121.1800 | Mining Intervention Site
+| ATM (SOS) | 7. Marinduque | 13.4483 | 121.8418 | Mining Intervention Site
+| ATM (SOS) | 8. Romblon | 12.3693 | 122.6862 | Mining Intervention Site
+| ATM (SOS) | 9. Palawan | 9.7407 | 118.7301 | Mining Intervention Site
+| ATM (SOS) | 10. Masbate | 12.5125 | 123.3989 | Mining Intervention Site
+| ATM (SOS) | 11. Samar | 10.7556 | 125.7392 | Mining Intervention Site
+| ATM (SOS) | 12. Leyte | 10.8356 | 124.9964 | Mining Intervention Site
+| ATM (SOS) | 13. Negros Oriental | 9.3331 | 122.8658 | Mining Intervention Site
+| ATM (SOS) | 14. Dinagat Island | 10.3253 | 125.5572 | Mining Intervention Site
+| ATM (SOS) | 15. Surigao del Sur | 9.2828 | 125.9422 | Mining Intervention Site
+| ATM (SOS) | 16. Agusan del Norte | 9.1669 | 125.5239 | Mining Intervention Site
+| ATM (SOS) | 17. South Cotabato | 6.4974 | 124.8472 | Mining Intervention Site
+| ATM (SOS) | 18. Maguindanao del Sur | 6.8548 | 124.1443 | Mining Intervention Site
+| ATM (SOS) | 19. Zamboanga del Sur | 8.0328 | 123.3147 | Mining Intervention Site
+| PMCJ (SOS) | A. La Union | 16.6167 | 120.3167 | Climate Justice Site
+| PMCJ (SOS) | B. Pangasinan | 16.0219 | 120.2319 | Climate Justice Site
+| PMCJ (SOS) | C. Zambales | 15.3272 | 119.9772 | Climate Justice Site
+| PMCJ (SOS) | D. Bataan | 14.6761 | 120.5361 | Climate Justice Site
+| PMCJ (SOS) | E. Bulacan | 14.8444 | 120.8117 | Climate Justice Site
+| PMCJ (SOS) | F. Navotas | 14.6667 | 120.9333 | Climate Justice Site
+| PMCJ (SOS) | G. Laguna | 14.2833 | 121.4167 | Climate Justice Site
+| PMCJ (SOS) | H. Batangas | 13.7500 | 121.0500 | Climate Justice Site
+| PMCJ (SOS) | I. Rizal | 14.5833 | 121.1667 | Climate Justice Site
+| PMCJ (SOS) | J. Infanta, Quezon | 14.7333 | 121.6500 | Climate Justice Site
+| PMCJ (SOS) | K. Mauban, Quezon | 14.1917 | 121.7300 | Climate Justice Site
+| PMCJ (SOS) | L. Pagbilao, Quezon | 13.9667 | 121.8167 | Climate Justice Site
+| PMCJ (SOS) | M. Atimonan, Quezon | 14.0000 | 121.9167 | Climate Justice Site
+| PMCJ (SOS) | N. Tagkawayan, Quezon | 13.9667 | 122.5333 | Climate Justice Site
+| PMCJ (SOS) | O. Palawan | 9.7407 | 118.7301 | Climate Justice Site
+| PMCJ (SOS) | P. Camarines Norte | 14.1167 | 122.9500 | Climate Justice Site
+| PMCJ (SOS) | Q. Masbate | 12.3667 | 123.6167 | Climate Justice Site
+| PMCJ (SOS) | R. Sorsogon | 12.9667 | 124.0000 | Climate Justice Site
+| PMCJ (SOS) | S. Catanduanes | 13.5833 | 124.2333 | Climate Justice Site
+| PMCJ (SOS) | T. Antique | 10.7436 | 121.9411 | Climate Justice Site
+| PMCJ (SOS) | U. Iloilo | 10.7024 | 122.5690 | Climate Justice Site
+| PMCJ (SOS) | V. Negros Occidental | 10.6768 | 122.9509 | Climate Justice Site
+| PMCJ (SOS) | W. Cebu | 10.3167 | 123.8878 | Climate Justice Site
+| PMCJ (SOS) | X. Leyte | 11.2505 | 125.0039 | Climate Justice Site
+| PMCJ (SOS) | Y. Bohol | 9.8333 | 124.1667 | Climate Justice Site
+| PMCJ (SOS) | Z. Samar | 11.7833 | 124.8833 | Climate Justice Site
+| PMCJ (SOS) | A1. Cagayan de Oro | 8.4822 | 124.6472 | Climate Justice Site
+| PMCJ (SOS) | B1. Lanao del Norte | 8.0540 | 123.7910 | Climate Justice Site
+| PMCJ (SOS) | C1. Misamis Oriental | 8.4847 | 124.6486 | Climate Justice Site
+| PMCJ (SOS) | D1. Bukidnon | 8.0515 | 124.9230 | Climate Justice Site
+| PMCJ (SOS) | E1. Davao City | 7.0656 | 125.5978 | Climate Justice Site
+| PMCJ (SOS) | F1. Davao del Sur | 6.3300 | 125.5000 | Climate Justice Site
+| PMCJ (SOS) | G1. Saranggani | 6.1007 | 125.2720 | Climate Justice Site
+| PMCJ (SOS) | H1. Agusan del Norte | 9.1264 | 125.5344 | Climate Justice Site
+| PMCJ (SOS) | I1. Maguindanao | 7.1330 | 124.3000 | Climate Justice Site
+| PMCJ (SOS) | Lanao del Sur | 8.0096 | 124.2779 | Climate Justice Site
+| Synergy Pilipinas | Isabela | 16.7000 | 121.7000 | Alliance Site
+| Synergy Pilipinas | Nueva Vizcaya | 16.4833 | 121.1500 | Alliance Site
+| Synergy Pilipinas | Pangasinan | 15.9833 | 120.6333 | Alliance Site
+| Synergy Pilipinas | Camarines Norte | 14.0667 | 122.7500 | Alliance Site
+| Synergy Pilipinas | Camarines Sur | 13.4500 | 123.3667 | Alliance Site
+| Synergy Pilipinas | Sorsogon | 12.9167 | 124.1167 | Alliance Site
+| Synergy Pilipinas | Albay | 13.1333 | 123.7333 | Alliance Site
+---
+| Lanao del Norte | 7.9579723 | 123.9021124 |
+| Zamboanga del Sur | 7.9043 | 123.3194 |
+| Iligan City | 14.3284364 | 121.0313472 |
+| Cotabato City | 7.223762 | 124.2467062 |
+| Maguindanao del Sur | 6.8581724 | 124.1486816 |
+| North Cotabato | 7.3048134 | 124.7826614 |
+| CARAGA | 9.2517336 | 125.8516600 |
+| Albay | 13.1774830 | 123.5280080 |
+| Camarines Sur | 13.5250000 | 123.3486000 |
+| Catanduanes | 13.8000000 | 124.2667000 |
+| Pampanga | 15.0251068 | 120.6870474 |
+| Nueva Ecija | 15.5833330 | 121.0000000 |
+| Surigao del Sur | 8.6700000 | 126.0000000 |
+| Ilocos Norte | 18.5593916 | 120.7869782 |
+| Mindoro | 12.9300000 | 121.0900000 |
+| Palawan | 9.8880000 | 118.4330000 |
+| Negros Occidental | 10.4200000 | 123.0000000 |
+| Leyte | 11.0000000 | 124.5100000 |
+| Saranggani | 5.9300000 | 124.9900000 |
+| Davao Oriental | 7.1000000 | 126.2000000 |
+---
+| ACAHP Principal Office | 8.4542 | 124.6319 | 38 Eva Velez St, Apovel Subd, Patag, Cagayan de Oro City
+| MASS-SPECC HQ | 8.4542 | 124.6319 | Corrales Ave cor Echem St, Cagayan de Oro City
+| PhilDHRRA HQ | 14.6386 | 121.0772 | #59 C. Salvador St, Loyola Heights, Quezon City
+| Cagayan de Oro | 8.4542 | 124.6319 | Cooperative Intervention Hub
+| Impasugong | 8.3247 | 125.0033 | Cooperative Field Site
+| Balingasag | 8.7447 | 124.7767 | Cooperative Field Site
+| Magsaysay | 7.7458 | 125.0680 | Cooperative Field Site
+| Prosperidad | 8.5800 | 125.8960 | Cooperative Field Site
+| Bayugan | 8.7561 | 125.7675 | Cooperative Field Site
+| Butuan | 8.9492 | 125.5436 | Cooperative Field Site
+---
+| National Coverage Node | 12.8797 | 121.7740 | Philippines Country Center
+| NCR Secretariats (CHD, IBON, GABRIELA) | 14.6529 | 121.0529 | Quezon City Administrative Hubs
+---
+| Gubat, Sorsogon | 12.9220599 | 124.1211995 |
+| Sorsogon | 12.9810310 | 123.9996644 |
+| Abra | 17.5972934 | 120.6184959 |
+| Agusan del Norte | 8.9406613 | 125.5340438 |
+| Agusan del Sur | 8.5539504 | 125.9459849 |
+| Albay | 13.2377392 | 123.5359627 |
+| Legazpi | 13.1533888 | 123.7347496 |
+| Antique | 10.7435910 | 121.9416171 |
+| Bantayan | 11.2030881 | 123.7368882 |
+| Batangas | 13.7653468 | 121.0643011 |
+| Benguet | 16.4653793 | 120.5882569 |
+| Bohol | 9.8594979 | 124.1975844 |
+| Bolinao, Pangasinan | 16.3075394 | 119.8576466 |
+| Bucas Grande Island, Socorro | 9.6176091 | 125.9368678 |
+| Camarines Norte | 14.1025998 | 122.9530455 |
+| Camarines Sur | 13.6388983 | 123.2005985 |
+| Cebu | 10.3415283 | 123.8683714 |
+| Ifugao | 16.7976917 | 121.1228271 |
+| Ilocos Sur | 17.5760293 | 120.3869500 |
+| Iloilo | 10.7027648 | 122.5692378 |
+| Labo | 14.1513987 | 122.8473472 |
+| Leyte | 11.2715882 | 124.9996673 |
+| Metro Manila | 14.6529530 | 121.0529569 |
+| Mindoro | 13.2340922 | 120.6294371 |
+| Negros Island | 10.1201366 | 123.0157986 |
+| Negros Occidental | 10.6766603 | 122.9516832 |
+| Northern Samar | 12.4080062 | 124.8430649 |
+| Nueva Ecija | 15.5567752 | 121.0957191 |
+| Nueva Vizcaya | 16.4881567 | 121.1597378 |
+| Palawan | 9.7398424 | 118.7447904 |
+| Parañaque | 14.4707950 | 121.0222819 |
+| Quirino | 16.5238837 | 121.5167070 |
+| Romblon | 12.5789237 | 122.2751815 |
+| Siargao | 9.8519107 | 126.0475400 |
+| Sorsogon | 12.9810310 | 123.9996644 |
+| Surigao Del Norte | 9.7885887 | 125.4912656 |
+| Surigao del Sur | 9.0696871 | 126.1933231 |
+| Tañon Strait | 10.2721343 | 123.4036619 |
+| Western Samar | 11.7950506 | 124.8968362 |
