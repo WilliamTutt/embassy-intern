@@ -981,24 +981,6 @@ const mapData = [
     }
   },
   {
-    "ngo": "VIVA SALUD",
-    "partnerName": "SSD",
-    "location": "Metro Manila",
-    "coordinates": {
-      "lat": 14.6529,
-      "lng": 121.0529
-    }
-  },
-  {
-    "ngo": "VIVA SALUD",
-    "partnerName": "PHM",
-    "location": "Metro Manila",
-    "coordinates": {
-      "lat": 14.6529,
-      "lng": 121.0529
-    }
-  },
-  {
     "ngo": "We Social Movement (WSM)",
     "partnerName": "AHW",
     "location": "Metro Manila",
