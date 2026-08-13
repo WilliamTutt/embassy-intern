@@ -321,13 +321,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 const efOrder = [
                     "AGRO-ECO", 
                     "SUMPAY", 
+                    "Kilos Ka",
                     "LAFCOOD", 
-                    "CONZARRD",
-                    "Kilos Ka"
+                    "CONZARRD"
                 ];
                 partnersList.sort((a, b) => {
                     const idxA = efOrder.indexOf(a) !== -1 ? efOrder.indexOf(a) : 999;
                     const idxB = efOrder.indexOf(b) !== -1 ? efOrder.indexOf(b) : 999;
+                    return idxA - idxB;
+                });
+            } else if (name === "TRIAS") {
+                const triasOrder = [
+                    "SOEMCO",
+                    "GSAC",
+                    "LPMPC",
+                    "FCCT",
+                    "AgriCOOPh",
+                    "KAISA KA",
+                    "K-COOP",
+                    "KAGAMAZAS"
+                ];
+                partnersList.sort((a, b) => {
+                    const idxA = triasOrder.indexOf(a) !== -1 ? triasOrder.indexOf(a) : 999;
+                    const idxB = triasOrder.indexOf(b) !== -1 ? triasOrder.indexOf(b) : 999;
                     return idxA - idxB;
                 });
             }
@@ -371,8 +387,55 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 const sortedTargets = [...ngo.targets].sort((a, b) => b.lat - a.lat);
 
+                const singleLinePartners = [
+                    "ATM", "PMCJ", 
+                    "KAISA KA", "K-COOP", "AgriCOOPh", "LPMPC", 
+                    "GSAC", "FCCT", "SOEMCO", "KAGAMAZAS"
+                ];
+                const hqOverrides = {
+                    "ATM": { lat: 14.6529, lng: 121.0529, location: "Metro Manila (HQ)" },
+                    "PMCJ": { lat: 14.6529, lng: 121.0529, location: "Metro Manila (HQ)" },
+                    "AgriCOOPh": { lat: 10.33028, lng: 123.87722, location: "170M. velez st. Bgy. guadalupe Cebu city (HQ)" },
+                    "FCCT": { lat: 10.31672, lng: 123.89071, location: "Sangi, Toledo city, Cebu city (HQ)" },
+                    "GSAC": { lat: 12.97389, lng: 123.99333, location: "Luna Street luna candol,subat sorsogon (HQ)" },
+                    "KAGAMAZAS": { lat: 7.750256, lng: 122.829444, location: "Batu, Siay, Zamboanga sibugay (HQ)" },
+                    "KAISA KA": { lat: 15.89623, lng: 120.67275, location: "Balin Bolinao, Bgy. Poblacion, pangasinan (HQ)" },
+                    "K-COOP": { lat: 14.6488, lng: 121.0509, location: "#5 Matimpiin Street, Barangay pinahan, quezon city (HQ)" },
+                    "LPMPC": { lat: 14.1532, lng: 122.8303, location: "Barangay malasugui, labo, camarines norte (HQ)" },
+                    "SOEMCO": { lat: 9.62139, lng: 125.96667, location: "Cordita St., Brgy, Navarro, Socorro, Surigao Del Norte (HQ)" }
+                };
+                const drawnSinglePartners = new Set();
+
                 sortedTargets.forEach((target, i) => {
-                    const targetPoint = projection([target.lng, target.lat]);
+                    const pName = target.details.partnerName;
+                    
+                    let drawLng = target.lng;
+                    let drawLat = target.lat;
+                    let isCentroid = false;
+                    let hqLocation = null;
+                    const partnerTargets = ngo.targets.filter(t => t.details.partnerName === pName);
+
+                    // For massive nationwide networks, draw only one representative line/dot
+                    if (singleLinePartners.includes(pName)) {
+                        if (drawnSinglePartners.has(pName)) {
+                            return; // Skip duplicate lines, keep province shading intact
+                        }
+                        drawnSinglePartners.add(pName);
+                        
+                        if (hqOverrides[pName]) {
+                            // Point directly to headquarters
+                            drawLat = hqOverrides[pName].lat;
+                            drawLng = hqOverrides[pName].lng;
+                            hqLocation = hqOverrides[pName].location;
+                        } else if (partnerTargets.length > 1) {
+                            // Calculate centroid of all locations for this partner
+                            drawLng = partnerTargets.reduce((sum, t) => sum + t.lng, 0) / partnerTargets.length;
+                            drawLat = partnerTargets.reduce((sum, t) => sum + t.lat, 0) / partnerTargets.length;
+                            isCentroid = true;
+                        }
+                    }
+
+                    const targetPoint = projection([drawLng, drawLat]);
                     if (!targetPoint) {
                         console.warn("Projection failed for target", target);
                         return;
@@ -399,13 +462,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Helper function to show tooltip
                     const showTooltip = (event) => {
                         event.stopPropagation();
+                        const partnerCount = partnerTargets.length;
+                        let tooltipLocType = "Geographic Centroid (Average Location)";
+                        let multiNoteText = "Arrow points to geographic center";
+                        
+                        if (hqLocation) {
+                            tooltipLocType = hqLocation;
+                            multiNoteText = "Arrow points to HQ";
+                        }
+                        
+                        const multiNote = partnerCount > 1 
+                            ? `<div style="color: ${ngo.color}; font-weight: 600; font-size: 0.75rem; margin-top: 4px;">• Active across ${partnerCount} sites (${multiNoteText})</div>` 
+                            : '';
+                        
+                        const locText = (isCentroid || hqLocation) ? tooltipLocType : target.details.location;
+                        
                         let htmlContent = `
                             <div style="font-weight: 800; color: ${ngo.color}; margin-bottom: 4px; text-transform: uppercase; font-size: 0.95rem;">${ngo.name}</div>
-                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">Partner: ${target.details.partnerName}</div>
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">Partner: ${pName}</div>
                             <div style="color: #64748b; font-size: 0.8rem;">
-                                <span style="font-weight: 600;">Location:</span> ${target.details.location}<br>
-                                <span style="font-weight: 600;">Coordinates:</span> ${target.lat.toFixed(4)}, ${target.lng.toFixed(4)}
+                                <span style="font-weight: 600;">Location:</span> ${locText}<br>
+                                <span style="font-weight: 600;">Coordinates:</span> ${drawLat.toFixed(4)}, ${drawLng.toFixed(4)}
                             </div>
+                            ${multiNote}
                         `;
                         tooltip.html(htmlContent)
                             .style("left", (event.pageX + 15) + "px")

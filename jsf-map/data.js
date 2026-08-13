@@ -877,8 +877,8 @@ const mapData = [
     "partnerName": "SOEMCO",
     "location": "Bucas Grande Island, Socorro",
     "coordinates": {
-      "lat": 9.6176,
-      "lng": 125.9369
+      "lat": 9.58,
+      "lng": 125.6
     }
   },
   {
@@ -886,8 +886,8 @@ const mapData = [
     "partnerName": "SOEMCO",
     "location": "Surigao del Norte",
     "coordinates": {
-      "lat": 9.7886,
-      "lng": 125.4913
+      "lat": 9.78,
+      "lng": 125.5
     }
   },
   {
@@ -895,8 +895,8 @@ const mapData = [
     "partnerName": "SOEMCO",
     "location": "Surigao del Sur",
     "coordinates": {
-      "lat": 9.0697,
-      "lng": 126.1933
+      "lat": 8.9,
+      "lng": 126.1
     }
   },
   {
@@ -913,8 +913,8 @@ const mapData = [
     "partnerName": "SOEMCO",
     "location": "Agusan del Norte",
     "coordinates": {
-      "lat": 8.9407,
-      "lng": 125.534
+      "lat": 9.0,
+      "lng": 125.5
     }
   },
   {
@@ -922,17 +922,17 @@ const mapData = [
     "partnerName": "SOEMCO",
     "location": "Agusan del Sur",
     "coordinates": {
-      "lat": 8.554,
-      "lng": 125.946
+      "lat": 8.5,
+      "lng": 125.8
     }
   },
   {
     "ngo": "TRIAS",
     "partnerName": "KAGAMAZAS",
-    "location": "Zamboanga del Sur",
+    "location": "Zamboanga Sibugay",
     "coordinates": {
-      "lat": 7.8211,
-      "lng": 123.2235
+      "lat": 7.750256,
+      "lng": 122.829444
     }
   },
   {
