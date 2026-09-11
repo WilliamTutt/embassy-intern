@@ -139,6 +139,11 @@ body {
     padding: 1.75rem;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     height: fit-content;
+    position: sticky;
+    top: 20px;
+    align-self: start;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
 }
 
 .controls-title {
