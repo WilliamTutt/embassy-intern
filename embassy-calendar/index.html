@@ -29,9 +29,9 @@
                 Download Word!
             </button>
             <button id="export-btn" class="export-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download PDF Poster
-        </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download PDF Poster
+            </button>
         </div>
     </div>
 
@@ -50,41 +50,59 @@
                 <select id="year-select" class="form-select">
                     <option value="2026" selected>2026</option>
                     <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="month-select">Display Mode</label>
-                <select id="month-select" class="form-select">
-                    <option value="0" selected>Full Year Poster (12 Months)</option>
-                </select>
-            </div>
+            <!-- Display Mode dropdown moved to IG section -->
 
             <div class="form-group">
                 <label>Event Categories</label>
                 <div class="filter-checks">
-                    <label class="check-label">
-                        <input type="checkbox" id="check-academic" checked>
-                        <span>🎓 Academic & Public Diplomacy</span>
-                    </label>
-                    <label class="check-label">
-                        <input type="checkbox" id="check-economic" checked>
-                        <span>💼 Economic & Maritime Cooperation</span>
-                    </label>
-                    <label class="check-label">
-                        <input type="checkbox" id="check-democracy" checked>
-                        <span>⚖️ Democracy, Human Rights</span>
-                    </label>
-                    <label class="check-label">
-                        <input type="checkbox" id="check-visits" checked>
-                        <span>🤝 Visits & Missions</span>
-                    </label>
-                    <label class="check-label">
-                        <input type="checkbox" id="check-belgian-days" checked>
-                        <span>🎉 Belgian Days</span>
-                    </label>
+                    <label class="check-label"><input type="checkbox" id="check-academic" checked><span>🎓 Academic & Public Diplomacy</span></label>
+                    <label class="check-label"><input type="checkbox" id="check-economic" checked><span>💼 Economic & Maritime Cooperation</span></label>
+                    <label class="check-label"><input type="checkbox" id="check-democracy" checked><span>⚖️ Democracy, Human Rights</span></label>
+                    <label class="check-label"><input type="checkbox" id="check-visits" checked><span>🤝 Visits & Missions</span></label>
+                    <label class="check-label"><input type="checkbox" id="check-belgian-days" checked><span>🎉 Belgian Days</span></label>
                 </div>
             </div>
+
+            <details style="margin-bottom: 1.5rem; cursor: pointer;">
+                <summary style="font-weight: 600; font-size: 0.9rem; color: var(--belgium-black); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Advanced Filters</summary>
+                
+                <div class="form-group" style="margin-top: 10px;">
+                    <label style="font-size: 0.8rem;">Event Source</label>
+                    <div class="filter-checks" style="font-size: 0.85rem;">
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="Belgium MFA" checked><span>Belgium MFA</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="Economic/Political Affairs" checked><span>Economic/Political Affairs</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="Local Events" checked><span>Local Events</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="Other Team BE events" checked><span>Other Team BE events</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="UN International Day" checked><span>UN International Day</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-source" value="" checked><span>(Empty/Unspecified)</span></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-size: 0.8rem;">Communication Type</label>
+                    <div class="filter-checks" style="font-size: 0.85rem;">
+                        <label class="check-label"><input type="checkbox" class="filter-comm-type" value="External (Public)" checked><span>External (Public)</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-comm-type" value="Internal (Stakeholders)" checked><span>Internal (Stakeholders)</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-comm-type" value="" checked><span>(Empty/Unspecified)</span></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-size: 0.8rem;">Urgency</label>
+                    <div class="filter-checks" style="font-size: 0.85rem;">
+                        <label class="check-label"><input type="checkbox" class="filter-urgency" value="Urgent" checked><span>Urgent</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-urgency" value="Time sensitive" checked><span>Time sensitive</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-urgency" value="Non-time sensitive" checked><span>Non-time sensitive</span></label>
+                        <label class="check-label"><input type="checkbox" class="filter-urgency" value="" checked><span>(Empty/Unspecified)</span></label>
+                    </div>
+                </div>
+            </details>
 
             <hr style="border: none; border-top: 1px solid var(--border-color); margin: 1.5rem 0;">
 
@@ -95,12 +113,111 @@
         </aside>
 
         <!-- Printable Canvas Container -->
-        <main style="overflow-x: auto;">
+        <main style="overflow-x: auto; display: flex; flex-direction: column; gap: 40px; padding-bottom: 40px;">
             <div id="poster-canvas">
                 <div id="poster-content">
                     <!-- Dynamic Calendar generated by calendar.js -->
                 </div>
             </div>
+            
+            <div id="master-table-container"></div>
+            
+            <!-- Communications Generator Section -->
+            <div id="comm-generator-section" style="border-top: 2px dashed #cbd5e1; padding-top: 40px; margin-top: 20px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px; color: var(--belgium-black);">Communications & Asset Generator</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Automatically generate targeted communication assets based on the selected month and platform.</p>
+                <div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <div>
+                        <label for="month-select" style="font-weight: 600; color: var(--belgium-black); display: block; margin-bottom: 5px;">Select Month:</label>
+                        <select id="month-select" class="form-select" style="width: 250px; font-size: 1rem; padding: 10px;">
+                            <option value="0" selected>-- Select a Month --</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="comm-platform-select" style="font-weight: 600; color: var(--belgium-black); display: block; margin-bottom: 5px;">Target Platform:</label>
+                        <select id="comm-platform-select" class="form-select" style="width: 320px; font-size: 1rem; padding: 10px;">
+                            <option value="ALL">ALL Platforms</option>
+                            <option value="Social Media (FB, LinkedIn, IG)" selected>Social Media (FB, LinkedIn, IG)</option>
+                            <option value="Email Blasts">Email Blasts</option>
+                            <option value="Private Communication">Private Communication</option>
+                            <option value="Traditional Media (Newspaper, Magazine, Radio, TV via release)">Traditional Media</option>
+                        </select>
+                    </div>
+
+                    <div id="ig-style-wrapper">
+                        <label for="ig-style-select" style="font-weight: 600; color: var(--belgium-black); display: block; margin-bottom: 5px;">Design Template (Social Media):</label>
+                        <select id="ig-style-select" class="form-select" style="width: 250px; font-size: 1rem; padding: 10px;">
+                            <option value="classic" selected>Classic Belgian</option>
+                            <option value="editorial">Editorial Magazine Spread</option>
+                            <option value="split">Split-Color Grid</option>
+                            <option value="scrapbook">Polaroid Scrapbook</option>
+                            <option value="minimalist">Minimalist Typography</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="comm-platforms-container">
+                    <!-- Social Media Container (Existing) -->
+                    <div id="social-media-container">
+                        <div id="ig-empty-state" style="padding: 40px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 10px; text-align: center; color: #64748b; margin-bottom: 20px;">
+                    Please select a specific month from the dropdown above to generate and preview its Instagram design.
+                </div>
+
+                <div id="ig-preview-content" style="display: none;">
+                    <button id="export-ig-btn" class="export-btn" style="background-color: #E1306C; color: white; border: none; margin-bottom: 30px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        Download Instagram Post
+                    </button>
+                    
+                    <div id="ig-preview-scale-wrapper" style="width: 1080px; transform: scale(0.6); transform-origin: top left; margin-bottom: -432px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden;">
+                        <div id="ig-export-wrapper">
+                            <!-- IG Post HTML will be injected here automatically -->
+                        </div>
+                    </div>
+                    </div> <!-- End of Social Media Container -->
+                    
+                    <!-- Email Blasts Container -->
+                    <div id="email-blasts-container" style="display: none;">
+                        <div id="email-empty-state" style="padding: 40px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 10px; text-align: center; color: #64748b; margin-bottom: 20px;">
+                            <h3 style="color: var(--belgium-black); font-family: 'Playfair Display', serif; margin-bottom: 10px;">Email Blast Generator</h3>
+                            <p>Select a month to automatically draft professional HTML email newsletter templates for your stakeholders.</p>
+                        </div>
+                        <div id="email-preview-content" style="display: none; margin-bottom: 30px;"></div>
+                    </div>
+                    
+                    <!-- Private Communication Container -->
+                    <div id="private-comm-container" style="display: none;">
+                        <div id="private-empty-state" style="padding: 40px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 10px; text-align: center; color: #64748b; margin-bottom: 20px;">
+                            <h3 style="color: var(--belgium-black); font-family: 'Playfair Display', serif; margin-bottom: 10px;">Private Communication Generator</h3>
+                            <p>Select a month to generate formal diplomatic briefs and confidential Memos.</p>
+                        </div>
+                        <div id="private-preview-content" style="display: none; margin-bottom: 30px;"></div>
+                    </div>
+                    
+                    <!-- Traditional Media Container -->
+                    <div id="traditional-media-container" style="display: none;">
+                        <div id="traditional-empty-state" style="padding: 40px; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 10px; text-align: center; color: #64748b; margin-bottom: 20px;">
+                            <h3 style="color: var(--belgium-black); font-family: 'Playfair Display', serif; margin-bottom: 10px;">Press Release Generator</h3>
+                            <p>Select a month to instantly format standard press releases for Newspaper, Magazine, Radio, and TV distribution.</p>
+                        </div>
+                        <div id="traditional-preview-content" style="display: none; margin-bottom: 30px;"></div>
+                    </div>
+                </div> <!-- End of Comm Platforms Container -->
+            </div>
+
         </main>
 
     </div>

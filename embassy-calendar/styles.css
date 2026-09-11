@@ -599,3 +599,515 @@ body {
 .stakeholder-table tr:hover td {
     background-color: #f8fafc;
 }
+
+/* Instagram Post Export Styles */
+.ig-post {
+    width: 1080px;
+    min-height: 1080px;
+    height: auto;
+    background: #ffffff;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    color: var(--belgium-black);
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+.ig-bg-deco {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    opacity: 0.25;
+}
+
+/* Month Themes */
+.ig-theme-01 .ig-bg-deco { background: #0ea5e9; } /* Jan: Icy Blue */
+.ig-theme-02 .ig-bg-deco { background: #e11d48; } /* Feb: Rose/Red */
+.ig-theme-03 .ig-bg-deco { background: #22c55e; } /* Mar: Spring Green */
+.ig-theme-04 .ig-bg-deco { background: #84cc16; } /* Apr: Light Green */
+.ig-theme-05 .ig-bg-deco { background: #eab308; } /* May: Yellow */
+.ig-theme-06 .ig-bg-deco { background: #f97316; } /* Jun: Orange */
+.ig-theme-07 .ig-bg-deco { background: var(--belgium-red); opacity: 0.3; } /* Jul: National Red */
+.ig-theme-08 .ig-bg-deco { background: #fbbf24; } /* Aug: Late Summer */
+.ig-theme-09 .ig-bg-deco { background: #d97706; } /* Sep: Autumn Orange */
+.ig-theme-10 .ig-bg-deco { background: #b45309; } /* Oct: Deep Autumn */
+.ig-theme-11 .ig-bg-deco { background: #4f46e5; } /* Nov: Deep Indigo */
+.ig-theme-12 .ig-bg-deco { background: #0284c7; } /* Dec: Winter Blue */
+
+.ig-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ig-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    padding-bottom: 20px;
+}
+
+.ig-crest {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--belgium-yellow), #eab308);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.ig-embassy-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.ig-month-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.ig-events-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.ig-event-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 15px 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    backdrop-filter: blur(10px);
+    border-left: 8px solid var(--belgium-red);
+}
+
+.ig-event-date {
+    font-size: 2.2rem;
+    font-weight: 800;
+    width: 100px;
+    color: var(--belgium-black);
+    line-height: 1;
+}
+
+.ig-event-date span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--belgium-red);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.ig-event-details {
+    flex: 1;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+.ig-event-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ig-event-cat {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.ig-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.ig-footer-stripes {
+    display: flex;
+    height: 12px;
+    width: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.ig-footer-stripes div { flex: 1; height: 100%; }
+.ig-footer-stripes .b { background: var(--belgium-black); }
+.ig-footer-stripes .y { background: var(--belgium-yellow); }
+.ig-footer-stripes .r { background: var(--belgium-red); }
+
+.ig-footer-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   STYLE 1: EDITORIAL MAGAZINE SPREAD
+   ========================================= */
+.ig-editorial-bg {
+    background-color: #f4f1eb;
+    color: var(--belgium-black);
+    font-family: 'Playfair Display', serif;
+}
+.ig-editorial-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 12px;
+    background: linear-gradient(to right, var(--belgium-black) 33.3%, var(--belgium-yellow) 33.3%, var(--belgium-yellow) 66.6%, var(--belgium-red) 66.6%);
+}
+.ig-editorial-container {
+    padding: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ig-editorial-header {
+    text-align: center;
+    border-bottom: 2px solid var(--belgium-red);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+.ig-editorial-sub {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.ig-editorial-month {
+    font-size: 110px;
+    line-height: 1;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--belgium-black);
+}
+.ig-editorial-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    display: block;
+    color: var(--belgium-red);
+}
+.ig-editorial-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.ig-editorial-item {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e0dfd9;
+}
+.ig-editorial-date {
+    font-family: 'Inter', sans-serif;
+    width: 140px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--belgium-black);
+    letter-spacing: 2px;
+}
+.ig-editorial-details {
+    flex: 1;
+    padding-left: 30px;
+    border-left: 2px solid var(--belgium-yellow);
+}
+.ig-editorial-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.ig-editorial-cat {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.ig-editorial-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+/* =========================================
+   STYLE 2: SPLIT-COLOR GRID
+   ========================================= */
+.ig-split-bg {
+    background: #fff;
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+}
+.ig-split-left {
+    background-color: var(--belgium-black);
+    color: white;
+    width: 40%;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ig-split-month {
+    font-family: 'Inter', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: auto 0;
+}
+.ig-split-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--belgium-red);
+}
+.ig-split-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+.ig-split-right {
+    width: 60%;
+    background-color: #f8fafc;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 20px solid var(--belgium-red);
+}
+.ig-split-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.ig-split-item {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+.ig-split-date {
+    background: var(--belgium-yellow);
+    color: var(--belgium-black);
+    font-weight: 800;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.ig-split-details {
+    flex: 1;
+}
+.ig-split-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--belgium-black);
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.ig-split-cat {
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* =========================================
+   STYLE 3: POLAROID SCRAPBOOK
+   ========================================= */
+.ig-scrap-bg {
+    background-color: #e5e5e5;
+    background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 50px !important;
+}
+.ig-scrap-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 30px;
+    background: linear-gradient(to right, var(--belgium-black) 33.3%, var(--belgium-yellow) 33.3%, var(--belgium-yellow) 66.6%, var(--belgium-red) 66.6%);
+}
+.ig-scrap-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    transform: rotate(-1deg);
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.05);
+}
+.ig-scrap-month {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-style: italic;
+    color: var(--belgium-black);
+    margin: 0;
+}
+.ig-scrap-sub {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #888;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.ig-scrap-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;
+}
+.ig-scrap-item {
+    background: white;
+    padding: 30px;
+    padding-top: 40px;
+    position: relative;
+    box-shadow: 2px 10px 20px rgba(0,0,0,0.08);
+}
+.ig-scrap-tape {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.7) 33.3%, rgba(253, 218, 36, 0.7) 33.3%, rgba(253, 218, 36, 0.7) 66.6%, rgba(239, 51, 64, 0.7) 66.6%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.ig-scrap-date {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--belgium-red);
+    margin-bottom: 10px;
+}
+.ig-scrap-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.ig-scrap-cat {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #999;
+}
+
+/* =========================================
+   STYLE 4: MINIMALIST TYPOGRAPHY
+   ========================================= */
+.ig-min-bg {
+    background-color: var(--belgium-black);
+    color: #f2ede4; /* Cream text */
+}
+.ig-min-container {
+    padding: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ig-min-month {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    line-height: 0.8;
+    color: var(--belgium-yellow);
+}
+.ig-min-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    letter-spacing: 15px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    color: var(--belgium-red);
+}
+.ig-min-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+}
+.ig-min-item {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+}
+.ig-min-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--belgium-yellow);
+    opacity: 0.9;
+}
+.ig-min-details {
+    flex: 1;
+}
+.ig-min-title {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.ig-min-cat {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+.ig-min-footer {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.3;
+    text-align: right;
+}
