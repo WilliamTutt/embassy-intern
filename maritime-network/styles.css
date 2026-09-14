@@ -1,0 +1,325 @@
+:root {
+    --belgium-black: #000000;
+    --belgium-yellow: #fdda24;
+    --belgium-red: #ef3340;
+
+    /* Mind-Map Theme Colors */
+    --bg-dark: #0f172a; /* Deep Slate */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    
+    /* Relationship Colors */
+    --color-financial: #FBBF24;
+    --color-logistical: #60A5FA;
+    --color-regulatory: #F87171;
+    --color-knowledge: #34D399;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.flag-banner { display: flex; height: 8px; width: 100%; }
+.flag-banner .stripe { flex: 1; height: 100%; }
+.stripe.black { background-color: var(--belgium-black); }
+.stripe.yellow { background-color: var(--belgium-yellow); }
+.stripe.red { background-color: var(--belgium-red); }
+
+/* Navigation & Sidebar */
+.top-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 3rem; margin: 0 auto;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.back-btn, .export-btn {
+    text-decoration: none; padding: 10px 20px; font-size: 0.95rem; font-weight: 600;
+    border-radius: 6px; display: inline-flex; align-items: center; gap: 8px; 
+    border: 1px solid rgba(255,255,255,0.2); cursor: pointer; color: white;
+    background: rgba(255,255,255,0.05); transition: background 0.2s;
+}
+.back-btn:hover, .export-btn:hover { background-color: rgba(255,255,255,0.1); }
+
+.app-container {
+    max-width: 100%; margin: 1rem auto 3rem auto; padding: 0 3rem;
+    display: grid; grid-template-columns: 320px 1fr; gap: 2rem;
+}
+.controls-panel {
+    background: #1e293b; border-radius: 12px;
+    padding: 1.75rem; height: fit-content;
+}
+.controls-title {
+    font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: white;
+}
+.form-group label {
+    display: block; font-weight: 600; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;
+}
+.form-input, .form-select {
+    width: 100%; padding: 10px 14px; border-radius: 6px; border: 1px solid #334155;
+    font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; background: #0f172a; color: white;
+}
+.action-btn {
+    background-color: white; color: #0f172a; width: 100%; padding: 12px; border: none;
+    font-size: 0.95rem; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 8px;
+}
+.action-btn:hover { background-color: #f1f5f9; }
+
+/* Clean Mind-Map Canvas */
+#poster-canvas {
+    width: 100%; min-height: 1100px; margin: 0 auto;
+    position: relative; box-sizing: border-box;
+    background-color: var(--bg-dark);
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.poster-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; margin-bottom: 3rem;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    position: relative; z-index: 50;
+}
+.poster-header-titles h1 {
+    font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; line-height: 1.1; color: white;
+}
+.poster-header-titles p {
+    font-size: 1.1rem; color: var(--text-muted); margin-top: 0.5rem;
+}
+.poster-header-crest .coat {
+    font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--belgium-yellow), #eab308);
+    width: 50px; height: 50px; border-radius: 50%; display: inline-flex;
+    align-items: center; justify-content: center; color: black; 
+}
+
+/* ---------------------------------------------------
+   HIERARCHICAL MIND-MAP LAYOUT
+   --------------------------------------------------- */
+.mindmap-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px;
+    gap: 40px;
+    position: relative;
+    z-index: 20;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.category-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 20;
+}
+.left-col .category-block { align-items: flex-end; text-align: right; }
+.right-col .category-block { align-items: flex-start; text-align: left; }
+
+.cat-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Tier Containers */
+.tier-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ---------------------------------------------------
+   CENTER HUB
+   --------------------------------------------------- */
+.center-col {
+    align-items: center;
+    justify-content: center;
+}
+.center-hub {
+    background: white;
+    color: #0f172a;
+    padding: 30px;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    z-index: 50;
+    border: 8px solid #1e293b;
+    position: relative;
+}
+
+/* Make nodes clickable */
+.mindmap-node, .center-hub {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.mindmap-node:hover, .center-hub:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.cross-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes dash {
+    to { stroke-dashoffset: -100; }
+}
+.primary-node:hover, .center-hub:hover {
+    box-shadow: 0 12px 30px rgba(255, 224, 102, 0.2);
+}
+
+/* Detail Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 600px;
+    max-width: 90%;
+    max-height: 85vh;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow-y: auto;
+    color: #0f172a;
+}
+.modal-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: none; border: none;
+    font-size: 2rem; color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-close:hover { color: #0f172a; }
+.modal-category {
+    font-size: 0.8rem; font-weight: 800; letter-spacing: 1px;
+    color: #3b82f6; text-transform: uppercase;
+}
+.modal-header h2 {
+    font-size: 2rem; font-weight: 800; margin: 8px 0;
+    font-family: 'Playfair Display', serif;
+    color: #0f172a;
+}
+.modal-header h4 {
+    font-size: 1.1rem; color: #64748b; font-weight: 500; margin-bottom: 20px;
+    padding-bottom: 15px; border-bottom: 1px solid #e2e8f0;
+}
+.modal-body {
+    font-size: 1rem; line-height: 1.7; color: #334155;
+}
+.modal-body p { margin-bottom: 16px; }
+.modal-body ul { margin-left: 20px; margin-bottom: 16px; }
+.modal-body li { margin-bottom: 8px; }
+
+/* Expansive Radar Rings to capitalize on empty space */
+.center-hub::before {
+    content: '';
+    position: absolute;
+    top: -50px; left: -50px; right: -50px; bottom: -50px;
+    border: 1px dashed rgba(255,255,255,0.15);
+    border-radius: 50%;
+    z-index: -1;
+}
+.center-hub::after {
+    content: '';
+    position: absolute;
+    top: -100px; left: -100px; right: -100px; bottom: -100px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 50%;
+    z-index: -1;
+}
+.hub-crest {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800;
+    color: var(--belgium-yellow); margin-bottom: 8px;
+}
+.center-hub h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
+.center-hub p { font-size: 0.75rem; font-weight: 600; color: #475569; text-transform: uppercase; }
+
+/* ---------------------------------------------------
+   NODES
+   --------------------------------------------------- */
+.mindmap-node {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 12px 16px;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    min-width: 200px;
+    max-width: 280px;
+}
+.mindmap-node h3 { font-size: 0.95rem; font-weight: 700; color: white; margin-bottom: 4px; }
+.mindmap-node p { font-size: 0.8rem; color: #94a3b8; }
+
+.cross-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.cross-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: #0f172a;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border-left: 3px solid;
+    line-height: 1.2;
+}
+
+.primary-node {
+    background: white;
+    padding: 16px 20px;
+}
+.primary-node h3 { color: #0f172a; font-size: 1.1rem; }
+.primary-node p { color: #475569; font-size: 0.85rem; font-weight: 500; }
+
+/* ---------------------------------------------------
+   LABELS & SVG
+   --------------------------------------------------- */
+.edge-label-pill {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #0f172a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 15;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 2px solid;
+}

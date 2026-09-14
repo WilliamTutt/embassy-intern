@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maritime Network & Connections | Embassy of Belgium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flag-banner">
+        <div class="stripe black"></div>
+        <div class="stripe yellow"></div>
+        <div class="stripe red"></div>
+    </div>
+
+    <div class="top-nav">
+        <a href="../index.html" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Main Portal
+        </a>
+        <button id="export-png-btn" class="export-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Infographic
+        </button>
+    </div>
+
+    <div class="app-container">
+        <!-- Controls Sidebar -->
+        <aside class="controls-panel">
+            <div class="controls-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Ecosystem Editor
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5;">
+                Add stakeholders to their respective quadrants. The visualization automatically organizes them into a strategic infographic layout.
+            </p>
+
+            <div class="form-group">
+                <label>Add Stakeholder</label>
+                <input type="text" id="node-name" class="form-input" placeholder="Organization Name" style="margin-bottom: 8px;">
+                <select id="node-group" class="form-select" style="margin-bottom: 8px;">
+                    <option value="diplomatic">Diplomatic & Institutional</option>
+                    <option value="infrastructure">Port Infrastructure & Financing</option>
+                    <option value="energy">Offshore Wind & Energy</option>
+                    <option value="welfare">Seafarer Welfare & Logistics</option>
+                </select>
+                <input type="text" id="node-title" class="form-input" placeholder="Short description / role" style="margin-bottom: 8px;">
+                <button id="add-node-btn" class="action-btn">Add to Ecosystem</button>
+            </div>
+        </aside>
+
+        <!-- Printable Map Canvas -->
+        <main style="overflow-x: auto;">
+            <div id="poster-canvas">
+                <!-- SVG routing layer -->
+                <svg id="connections-svg" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5;"></svg>
+
+                <div class="poster-header">
+                    <div class="poster-header-titles">
+                        <h1>Strategic Diplomatic & Industrial Partnership</h1>
+                        <p>Belgium-Philippines Maritime and Green Energy Alliance</p>
+                    </div>
+                    <div class="poster-header-crest">
+                        <div class="coat">BE</div>
+                    </div>
+                </div>
+
+                <!-- Hierarchical Mind-Map Layout -->
+                <div class="mindmap-layout">
+                    
+                    <!-- Left Column -->
+                    <div class="column left-col">
+                        <div class="category-block" id="cat-diplomatic">
+                            <h2 class="cat-title">Diplomatic & Institutional</h2>
+                            <div class="tier-container primary-tier" id="tier1-diplomatic"></div>
+                            <div class="tier-container secondary-tier" id="tier2-diplomatic"></div>
+                        </div>
+                        
+                        <div class="category-block" id="cat-infrastructure">
+                            <h2 class="cat-title">Port Infrastructure</h2>
+                            <div class="tier-container primary-tier" id="tier1-infrastructure"></div>
+                            <div class="tier-container secondary-tier" id="tier2-infrastructure"></div>
+                        </div>
+                    </div>
+
+                    <!-- Center Column -->
+                    <div class="column center-col">
+                        <div class="center-hub" id="hub-node">
+                            <div class="hub-crest">BE</div>
+                            <h2>Embassy of Belgium</h2>
+                            <p>Manila, Philippines</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="column right-col">
+                        <div class="category-block" id="cat-energy">
+                            <h2 class="cat-title">Offshore Wind & Energy</h2>
+                            <div class="tier-container primary-tier" id="tier1-energy"></div>
+                            <div class="tier-container secondary-tier" id="tier2-energy"></div>
+                        </div>
+                        
+                        <div class="category-block" id="cat-welfare">
+                            <h2 class="cat-title">Seafarer Welfare & Training</h2>
+                            <div class="tier-container primary-tier" id="tier1-welfare"></div>
+                            <div class="tier-container secondary-tier" id="tier2-welfare"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Geographic Map Container -->
+                        <div id="geo-map-canvas" style="
+                width: 100%; min-height: 900px; margin: 4rem auto 0 auto;
+                position: relative; box-sizing: border-box;
+                background-color: var(--bg-dark);
+                padding: 2.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 12px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            ">
+                <div class="poster-header" style="margin-bottom: 2rem;">
+                    <div class="poster-header-titles">
+                        <h1>Logistics & Port Infrastructure Network</h1>
+                        <p>Geographical Distribution of Maritime Assets and Trade Routes</p>
+                    </div>
+                </div>
+
+                <!-- D3 Map Container -->
+                <div id="d3-map-container" style="width: 100%; height: 750px; position: relative;">
+                    <p style="color: var(--text-muted); text-align: center; margin-top: 200px;">Map data loading...</p>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="map.js"></script>
+    
+    <!-- Detail Modal -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="modal-category" id="modal-category">CATEGORY</span>
+                <h2 class="modal-title" id="modal-title">Node Title</h2>
+                <div class="modal-role" id="modal-role">Node Role</div>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
